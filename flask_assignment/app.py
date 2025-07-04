@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, jsonify
 from dotenv import load_dotenv
 import pymongo
 import os 
+import json
 
 load_dotenv()
   
@@ -17,6 +18,12 @@ app = Flask(__name__)
 @app.route('/')
 def home(): 
     return render_template('index.html')
+@app.route('/api')
+def api():
+    with open('data,json') as file:
+        data = json.load(file)
+    return jsonify(data)
+
 
 @app.route('/submit', methods=['POST'])
 def submit():
