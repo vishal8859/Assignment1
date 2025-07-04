@@ -1,0 +1,123 @@
+[
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "pymongo",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pymongo",
+        "description": "pymongo",
+        "detail": "pymongo",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def home(): \n    return render_template('index.html')\n@app.route('/submit', methods=['POST'])\ndef submit():\n    form_data = dict(request.form)\n    # Insert the data into MongoDB\n    collection.insert_one(form_data)\n    return jsonify({\"message\": \"Data submitted successfully!\"})\nif __name__ == '__main__':\n    app.run(debug=True)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "submit",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def submit():\n    form_data = dict(request.form)\n    # Insert the data into MongoDB\n    collection.insert_one(form_data)\n    return jsonify({\"message\": \"Data submitted successfully!\"})\nif __name__ == '__main__':\n    app.run(debug=True)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "MONGO_URI",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "MONGO_URI = os.getenv(\"MONGO_URI\")\n# Connect to MongoDB        \nclient = pymongo.MongoClient(MONGO_URI)\ndb = client.test\ncollection = db['flask-assignment']\napp = Flask(__name__)\n@app.route('/')\ndef home(): \n    return render_template('index.html')\n@app.route('/submit', methods=['POST'])",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "client = pymongo.MongoClient(MONGO_URI)\ndb = client.test\ncollection = db['flask-assignment']\napp = Flask(__name__)\n@app.route('/')\ndef home(): \n    return render_template('index.html')\n@app.route('/submit', methods=['POST'])\ndef submit():\n    form_data = dict(request.form)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "db = client.test\ncollection = db['flask-assignment']\napp = Flask(__name__)\n@app.route('/')\ndef home(): \n    return render_template('index.html')\n@app.route('/submit', methods=['POST'])\ndef submit():\n    form_data = dict(request.form)\n    # Insert the data into MongoDB",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "collection",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "collection = db['flask-assignment']\napp = Flask(__name__)\n@app.route('/')\ndef home(): \n    return render_template('index.html')\n@app.route('/submit', methods=['POST'])\ndef submit():\n    form_data = dict(request.form)\n    # Insert the data into MongoDB\n    collection.insert_one(form_data)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app = Flask(__name__)\n@app.route('/')\ndef home(): \n    return render_template('index.html')\n@app.route('/submit', methods=['POST'])\ndef submit():\n    form_data = dict(request.form)\n    # Insert the data into MongoDB\n    collection.insert_one(form_data)\n    return jsonify({\"message\": \"Data submitted successfully!\"})",
+        "detail": "app",
+        "documentation": {}
+    }
+]
